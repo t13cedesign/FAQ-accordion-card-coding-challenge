@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/t13cedesign/Frontend-Mentor---Profile-card-component-solution]
-- Live Site URL: [https://t13cedesign.github.io/Frontend-Mentor---Profile-card-component-solution/]
+- Solution URL: [https://github.com/t13cedesign/FAQ-accordion-card-coding-challenge]
+- Live Site URL: [https://t13cedesign.github.io/FAQ-accordion-card-coding-challenge/]
 
 ## My process
 
