@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+  --SoftRed: hsl(14, 88%, 65%);
+  --VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+  --DarkGrayishBlue: hsl(240, 6%, 50%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: left;
+  color: var(--VeryDarkDesaturatedBlue);
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+}
+
+.container {
+  min-width: 32.4rem;
+  max-width: 50rem;
+  border-radius: 1rem;
+
+  margin: 39% 6.5% 0% 6.5%;
+  background-color: #ffffff;
+  box-shadow: 0rem 2rem 6rem 0rem hsla(229, 23%, 23%, 0.5);
+}
+
+.image-desktop {
+  display: none;
+}
+
+.image-container {
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes floatY {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#illuMobile {
+  position: absolute;
+  top: -11rem;
+  right: calc(50% - 12.3rem);
+
+  animation-name: floatY;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shadowY {
+  0% {
+    transform: scale(0.96);
+    filter: blur(0.6px);
+  }
+  50% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  100% {
+    transform: scale(0.96);
+    filter: blur(0.6px);
+  }
+}
+
+#shadowMobile {
+  animation-name: shadowY;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.2rem;
+  margin-top: 2.7rem;
+  margin-bottom: 1rem;
+}
+
+.answers {
+  color: var(--DarkGrayishBlue);
+}
+
+.inner-container {
+  padding: 0 2.4rem 4.8rem 2.4rem;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.faq {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  overflow: hidden;
+}
+
+.faq-label {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.7rem 0;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.faq-label:hover {
+  color: var(--SoftRed);
+}
+
+.faq-label::after {
+  content: url('images/icon-arrow-down.svg');
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: all 0.35s;
+}
+
+.faq-content {
+  max-height: 0;
+  transition: all 0.35s;
+}
+
+/* :checked */
+
+input:checked + .faq-label {
+  font-weight: 700;
+  padding-bottom: 1rem;
+  transition: all 0.35s;
+}
+
+input:checked + .faq-label::after {
+  transform: rotate(0deg);
+}
+
+input:checked ~ .faq-content {
+  max-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+/* atributtion */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.attribution a {
+  color: hsl(263, 94%, 86%);
+}
+
+@media screen and (min-width: 426px) {
+  .container {
+    margin: 15.5rem auto 0;
+    max-width: 42.5rem;
+    transition: all 0.35s;
+  }
+
+  .inner-container {
+    padding: 0 5rem 4.8rem 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    position: relative;
+    display: flex;
+    padding: 7.1rem 0;
+    margin: 9% auto 0;
+    max-width: 92rem;
+    border-radius: 2.5rem;
+    background: url(images/bg-pattern-desktop.svg) top -296px left -580px
+        no-repeat,
+      #ffffff;
+    transition: all 0.35s;
+  }
+
+  #illuMobile,
+  #shadowMobile {
+    display: none;
+  }
+
+  .image-container {
+    overflow: hidden;
+  }
+
+  .image-desktop {
+    display: block;
+  }
+
+  #box-desktop {
+    position: absolute;
+    z-index: 1;
+    right: calc(100% - 9.5rem);
+    top: 20.5rem;
+
+    animation-name: floatY;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  #illuDesktop {
+    position: relative;
+    left: -83px;
+  }
+
+  .inner-container {
+    padding: 0rem;
+    width: 35rem;
+  }
+
+  h1 {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .faq-label {
+    font-size: 1.4rem;
+  }
+}

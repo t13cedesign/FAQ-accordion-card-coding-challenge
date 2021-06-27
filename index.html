@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <article class="container">
+      <img
+        class="image-desktop"
+        id="box-desktop"
+        src="images/illustration-box-desktop.svg"
+        alt="@ box"
+      />
+      <section class="image-container">
+        <img
+          class="image-desktop"
+          id="illuDesktop"
+          src="images/illustration-woman-online-desktop.svg"
+          alt="Little woman on a desk in front of a monitor tapping it"
+        />
+        <img
+          id="illuMobile"
+          src="images/illustration-woman-online-mobile.svg"
+          alt="Little woman on a desk in front of a monitor tapping it"
+        />
+        <img
+          id="shadowMobile"
+          src="images/bg-pattern-mobile.svg"
+          alt="Little woman on a desk in front of a monitor tapping it"
+        />
+      </section>
+
+      <section class="inner-container">
+        <h1>FAQ</h1>
+        <div class="faqs-container">
+          <div class="faq">
+            <input type="radio" id="faq01" name="rd" />
+            <label class="faq-label" for="faq01">
+              How many team members can I invite?
+            </label>
+            <div class="faq-content">
+              <p class="answers">
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <input type="radio" id="faq02" name="rd" />
+            <label class="faq-label" for="faq02">
+              What is the maximum file upload size?
+            </label>
+            <div class="faq-content">
+              <p class="answers">
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <input type="radio" id="faq03" name="rd" />
+            <label class="faq-label" for="faq03">
+              How do I reset my password?
+            </label>
+            <div class="faq-content">
+              <p class="answers">
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <input type="radio" id="faq04" name="rd" />
+            <label class="faq-label" for="faq04">
+              Can I cancel my subscription?
+            </label>
+            <div class="faq-content">
+              <p class="answers">
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <input type="radio" id="faq05" name="rd" />
+            <label class="faq-label" for="faq05">
+              Do you provide additional support?
+            </label>
+            <div class="faq-content">
+              <p class="answers">
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://juanantoniobrenes.myportfolio.com/projects"
+        target="_blank"
+        >j3renes</a
+      >
+    </div>
+  </body>
+</html>
